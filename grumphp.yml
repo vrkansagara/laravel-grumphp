@@ -120,3 +120,17 @@ grumphp:
     securitychecker_enlightn:
       lockfile: ./composer.lock
       run_always: true
+    phpcs: ~
+    phpmd:
+      whitelist_patterns: [ ]
+      exclude: [ ]
+      report_format: text
+      ruleset:
+        - 'unusedcode'
+        - 'cleancode'
+        - 'codesize'
+        - 'naming'
+        - 'design'
+        - 'controversial'
+      triggered_by: [ 'php' ]
+
