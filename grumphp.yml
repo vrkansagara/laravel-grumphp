@@ -25,44 +25,6 @@ grumphp:
     variables: {}
     paths: []
   tasks:
-    git_blacklist:
-      keywords:
-        - "die;"
-        - "die\\("
-        - "var_dump\\("
-        - "print_r\\("
-        - "exit;"
-        - "exit\\("
-        - "ObjectManager::getInstance"
-        - "set_include_path"
-        - "phpinfo()"
-        - "phpinfo\\("
-        - "_GET\\["
-        - "_POST\\["
-        - "_REQUEST\\["
-        - "_SESSION\\["
-        - "<<<<<<<"
-        - "======="
-        - "console.log\\("
-        - "console.warn\\("
-        - "console.error\\("
-      whitelist_patterns: []
-      triggered_by: [ 'php', 'phtml', 'vue', 'js' ]
-      regexp_type: G
-      match_word: false
-      ignore_patterns:
-        - /^library\/(.*)/
-    phpmd:
-      whitelist_patterns: []
-      exclude: []
-      report_format: text
-      ruleset:
-        - 'unusedcode'
-        - 'cleancode'
-        - 'codesize'
-        - 'naming'
-        - 'design'
-        - 'controversial'
-      triggered_by: [ 'php' ]
+    phpcs: ~
   testsuites: []
   extensions: []
