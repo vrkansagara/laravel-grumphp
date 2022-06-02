@@ -217,7 +217,7 @@ class CodeQualityController extends Controller
     {
         try {
             // ...
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             echo $e->getCode();
         } // empty catch block
     }
