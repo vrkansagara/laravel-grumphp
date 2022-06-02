@@ -25,6 +25,14 @@ grumphp:
     variables: {}
     paths: []
   tasks:
+    composer:
+      file: ./composer.json
+      no_check_all: true
+      no_check_lock: false
+      no_check_publish: false
+      no_local_repository: false
+      with_dependencies: false
+      strict: false
     git_blacklist:
       keywords:
         - "die;"
