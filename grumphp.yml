@@ -125,7 +125,3 @@ grumphp:
       sniffs: [ ]
       triggered_by: [ php ]
       exclude: []
-  testsuites:
-    php:
-      tasks:
-        - phpcs
