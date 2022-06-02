@@ -216,7 +216,7 @@ class CodeQualityController extends Controller
     protected function emptyCatchBlock()
     {
         try {
-            // ...
+//           echo $this->callFuncSV();
         } catch (\Exception $e) {
             echo $e->getCode();
         } // empty catch block
