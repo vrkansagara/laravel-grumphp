@@ -123,4 +123,3 @@ grumphp:
     shell:
       scripts:
         - test.sh
-      triggered_by: [ php ]
