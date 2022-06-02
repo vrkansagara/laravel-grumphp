@@ -120,6 +120,3 @@ grumphp:
     securitychecker_enlightn:
       lockfile: ./composer.lock
       run_always: false
-    shell:
-      scripts:
-        - test.sh
