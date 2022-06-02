@@ -25,25 +25,6 @@ grumphp:
     variables: {}
     paths: []
   tasks:
-    composer:
-      file: ./composer.json
-      no_check_all: true
-      no_check_lock: false
-      no_check_publish: false
-      no_local_repository: false
-      with_dependencies: false
-      strict: true
-    composer_normalize:
-      indent_size: ~
-      indent_style: ~
-      no_check_lock: false
-      no_update_lock: true
-      verbose: true
-    composer_require_checker:
-      composer_file: 'composer.json'
-      config_file: ~
-      ignore_parse_errors: false
-      triggered_by: [ 'composer.json', 'composer.lock', '*.php' ]
     git_blacklist:
       keywords:
         - "die;"
@@ -71,56 +52,17 @@ grumphp:
       match_word: false
       ignore_patterns:
         - /^library\/(.*)/
-    git_branch_name:
-      whitelist:
-        - "/trda-([a-z|0-9]+)$/"
-        - "/trda-(hotfix|bugfix|feature|release|task)-([a-z|0-9]+)$/"
-      blacklist:
-        - "master"
-        - "staging"
-        - "qa"
-        - "develop"
-        - "infra"
-      additional_modifiers: ''
-      allow_detached_head: true
-    git_commit_message:
-      allow_empty_message: false
-      enforce_capitalized_subject: true
-      enforce_no_subject_punctuations: false
-      enforce_no_subject_trailing_period: true
-      enforce_single_lined_subject: true
-      type_scope_conventions: [ ]
-      max_body_width: 72
-      max_subject_width: 60
-      matchers:
-        Must contain JIRA issue number: /TRDA-\d+/
-      case_insensitive: true
-      multiline: true
-      additional_modifiers: ''
-    phpstan:
-      autoload_file: ~
-      configuration: ~
-      level: 5
-      force_patterns: [ ]
-      ignore_patterns: [ ]
+    phpmd:
+      whitelist_patterns: []
+      exclude: []
+      report_format: text
+      ruleset:
+        - 'unusedcode'
+        - 'cleancode'
+        - 'codesize'
+        - 'naming'
+        - 'design'
+        - 'controversial'
       triggered_by: [ 'php' ]
-      memory_limit: "-1"
-      use_grumphp_paths: true
-    phpunit:
-      config_file: ~
-      testsuite: ~
-      group: []
-      exclude_group: []
-      always_execute: true
-      order: null
-    securitychecker_roave:
-      jsonfile: ./composer.json
-      lockfile: ./composer.lock
-      run_always: false
-    securitychecker_enlightn:
-      lockfile: ./composer.lock
-      run_always: false
-    shell:
-      scripts:
-        - test.sh
-      triggered_by: [ php ]
+  testsuites: []
+  extensions: []
