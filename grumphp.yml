@@ -33,6 +33,12 @@ grumphp:
       no_local_repository: false
       with_dependencies: false
       strict: true
+    composer_normalize:
+      indent_size: ~
+      indent_style: ~
+      no_check_lock: false
+      no_update_lock: true
+      verbose: true
     git_blacklist:
       keywords:
         - "die;"
