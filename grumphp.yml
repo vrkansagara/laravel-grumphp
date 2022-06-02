@@ -55,6 +55,9 @@ grumphp:
         - "ObjectManager::getInstance"
         - "set_include_path"
         - "phpinfo()"
+        - "sizeof\\("
+        - "delete\\("
+        - "is_null\\("
         - "phpinfo\\("
         - "_GET\\["
         - "_POST\\["
@@ -71,7 +74,6 @@ grumphp:
       match_word: false
       ignore_patterns:
         - /^library\/(.*)/
-
     git_branch_name:
       whitelist:
         - "/trda-([a-z|0-9]+)$/"
@@ -108,3 +110,23 @@ grumphp:
       triggered_by: [ 'php' ]
       memory_limit: "-1"
       use_grumphp_paths: true
+    phpcs:
+      standard:
+        - ./phpcs.xml
+      severity: ~
+      error_severity: ~
+      warning_severity: ~
+      tab_width: ~
+      report: full
+      report_width: ~
+      whitelist_patterns: [ ]
+      encoding: ~
+      ignore_patterns: [ ]
+      sniffs: [ ]
+      triggered_by: [ php ]
+      exclude: []
+
+  testsuites:
+    php:
+      tasks:
+        - phpcs
