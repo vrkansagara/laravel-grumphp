@@ -52,5 +52,16 @@ grumphp:
       match_word: false
       ignore_patterns:
         - /^library\/(.*)/
+
+    git_branch_name:
+      whitelist:
+        - "/trda-([0-9]*)/"
+      blacklist:
+        - "master"
+        - "staging"
+        - "qa"
+        - "develop"
+      additional_modifiers: ''
+      allow_detached_head: true
   testsuites: []
   extensions: []
