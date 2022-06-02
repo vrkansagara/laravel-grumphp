@@ -39,6 +39,11 @@ grumphp:
       no_check_lock: false
       no_update_lock: true
       verbose: true
+    composer_require_checker:
+      composer_file: 'composer.json'
+      config_file: ~
+      ignore_parse_errors: false
+      triggered_by: [ 'composer.json', 'composer.lock', '*.php' ]
     git_blacklist:
       keywords:
         - "die;"
