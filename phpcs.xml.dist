@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset name="ERP Coding Standard">
+    <description>ERP Coding Standard</description>
+
+    <!-- display progress -->
+    <arg value="ps"/>
+    <arg name="colors"/>
+    <arg name="report-summary"/>
+
+    <!-- custom configuration settings -->
+    <config name="php_path" value="/usr/bin/php"/>
+
+    <rule ref="PSR12"/>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
+    <!-- Allow Zend class naming -->
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
+        <severity>0</severity>
+    </rule>
+
+    <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+        <type>warning</type>
+    </rule>
+    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.NewlineBeforeOpenBrace">
+        <type>warning</type>
+    </rule>
+
+    <file>cron/application</file>
+    <file>extranet/application/vbd/application</file>
+    <file>gearman</file>
+    <file>library</file>
+    <file>service/application/modules</file>
+    <file>tests</file>
+    <exclude-pattern>vendor/*</exclude-pattern>
+
+    <exclude-pattern>*/data/*</exclude-pattern>
+    <include-pattern>*\.php$</include-pattern>
+</ruleset>
