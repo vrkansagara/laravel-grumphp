@@ -38,7 +38,7 @@ grumphp:
       indent_style: ~
       no_check_lock: false
       no_update_lock: true
-      verbose: false
+      verbose: true
     composer_require_checker:
       composer_file: 'composer.json'
       config_file: ~
@@ -55,9 +55,6 @@ grumphp:
         - "ObjectManager::getInstance"
         - "set_include_path"
         - "phpinfo()"
-        - "sizeof\\("
-        - "delete\\("
-        - "is_null\\("
         - "phpinfo\\("
         - "_GET\\["
         - "_POST\\["
@@ -103,25 +100,27 @@ grumphp:
     phpstan:
       autoload_file: ~
       configuration: ~
-      level: null
+      level: 5
       force_patterns: [ ]
-      ignore_patterns:
-        - routes/console.php
+      ignore_patterns: [ ]
       triggered_by: [ 'php' ]
       memory_limit: "-1"
       use_grumphp_paths: true
-    phpcs:
-      standard:
-        - ./phpcs.xml
-      severity: ~
-      error_severity: ~
-      warning_severity: ~
-      tab_width: ~
-      report: full
-      report_width: ~
-      whitelist_patterns: [ ]
-      encoding: ~
-      ignore_patterns: [ ]
-      sniffs: [ ]
+    phpunit:
+      config_file: ~
+      testsuite: ~
+      group: []
+      exclude_group: []
+      always_execute: true
+      order: null
+    securitychecker_roave:
+      jsonfile: ./composer.json
+      lockfile: ./composer.lock
+      run_always: false
+    securitychecker_enlightn:
+      lockfile: ./composer.lock
+      run_always: false
+    shell:
+      scripts:
+        - test.sh
       triggered_by: [ php ]
-      exclude: []
