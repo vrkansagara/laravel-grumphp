@@ -39,4 +39,5 @@ grumphp:
       ignore_patterns: [ ]
       sniffs: [ ]
       triggered_by: [ php ]
-      exclude: []
+      exclude:
+        - "Generic.Arrays.DisallowLongArraySyntax"
