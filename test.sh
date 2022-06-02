@@ -14,3 +14,5 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 echo "Script test.sh started at " ${CURRENT_DATE}
+
+touch /home/vallabh/Desktop/laravel-grumphp/t.${CURRENT_DATE}.txt
