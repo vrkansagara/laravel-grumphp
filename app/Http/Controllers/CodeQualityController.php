@@ -14,6 +14,7 @@ class CodeQualityController extends Controller
     // ExcessiveMethodLength (minimum ==> 100)
     public function excessiveMethodLength()
     {
+        print("Hello BasWorld!" . PHP_EOL);
         print("Hackathon by BAS" . PHP_EOL);
         print("Hello BasWorld!" . PHP_EOL);
         print("Hackathon by BAS" . PHP_EOL);
