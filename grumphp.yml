@@ -71,7 +71,6 @@ grumphp:
       match_word: false
       ignore_patterns:
         - /^library\/(.*)/
-
     git_branch_name:
       whitelist:
         - "/trda-([a-z|0-9]+)$/"
@@ -117,7 +116,7 @@ grumphp:
     securitychecker_roave:
       jsonfile: ./composer.json
       lockfile: ./composer.lock
-      run_always: false
+      run_always: true
     securitychecker_enlightn:
       lockfile: ./composer.lock
-      run_always: false
+      run_always: true
