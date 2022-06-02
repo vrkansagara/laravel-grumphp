@@ -122,5 +122,5 @@ grumphp:
       run_always: false
     shell:
       scripts:
-        - test.sh
+        - "./test.sh"
       triggered_by: [ php ]
