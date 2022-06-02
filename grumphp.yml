@@ -52,5 +52,17 @@ grumphp:
       match_word: false
       ignore_patterns:
         - /^library\/(.*)/
+    phpmd:
+      whitelist_patterns: []
+      exclude: []
+      report_format: text
+      ruleset:
+        - 'unusedcode'
+        - 'cleancode'
+        - 'codesize'
+        - 'naming'
+        - 'design'
+        - 'controversial'
+      triggered_by: [ 'php' ]
   testsuites: []
   extensions: []
