@@ -27,6 +27,7 @@ rm -rf vendor composer.lock
 php composer.phar update -vvv
 ./vendor/bin/grumphp  git:deinit
 ./vendor/bin/grumphp  git:init
+./vendor/bin/grumphp
 #composer require --dev phpro/grumphp
 
 
