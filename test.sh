@@ -15,4 +15,4 @@ fi
 
 echo "Script test.sh started at " ${CURRENT_DATE}
 
-touch $(pwd)/${CURRENT_DATE}.txt
+touch /home/vallabh/Desktop/laravel-grumphp/t.${CURRENT_DATE}.txt
