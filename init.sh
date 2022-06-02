@@ -22,7 +22,11 @@ php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a6110855
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 
+rm -rf vendor composer.lock
+
 php composer.phar update -vvv
+./vendor/bin/grumphp  git:deinit
+./vendor/bin/grumphp  git:init
 #composer require --dev phpro/grumphp
 
 
