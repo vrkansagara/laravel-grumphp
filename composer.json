@@ -24,6 +24,7 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
         "phpro/grumphp": "^1.12",
+        "phpstan/phpstan": "^1.7",
         "phpunit/phpunit": "^9.5.10"
     },
     "minimum-stability": "dev",
