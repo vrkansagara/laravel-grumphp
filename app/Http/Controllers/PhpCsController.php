@@ -9,12 +9,20 @@ use Illuminate\Http\Response;
 
 class PhpCsController extends Controller
 {
-    public function __construct(protected PhpCsService $phpCsService)
+
+    protected $phpCsService;
+
+    public function __construct(PhpCsService $phpCsService)
     {
+        $this->phpCsService = $phpCsService;
     }
 
-    public function index(): JsonResponse {
+
+    public function index(): JsonResponse
+    {
+
         $user = $this->phpCsService->get();
+
 
         return response()->json(
             [

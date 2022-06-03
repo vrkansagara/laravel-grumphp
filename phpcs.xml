@@ -42,6 +42,7 @@
         <exclude name="PEAR.Commenting.FunctionComment.Missing" />
         <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket" />
         <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
+        <exclude name="PEAR.Commenting.FunctionComment.WrongStyle" />
     </rule>
 
     <exclude-pattern>vendor/*</exclude-pattern>

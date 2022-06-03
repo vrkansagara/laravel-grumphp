@@ -12,16 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-$test = true;
-die;
 
-echo $test;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-die();
-
-phpinfo();
